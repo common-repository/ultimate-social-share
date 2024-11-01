@@ -1,0 +1,798 @@
+/* General
+/************************************************************/
+.ultimatesocialshare-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ultimatesocialshare-columns.ultimatesocialshare-has-total-share-count-before .ultimatesocialshare-buttons-wrapper {
+  margin-left: 50px;
+}
+.ultimatesocialshare-columns.ultimatesocialshare-has-total-share-count-after .ultimatesocialshare-buttons-wrapper {
+  margin-right: 50px;
+}
+
+/* Social Network Buttons
+/************************************************************/
+body a.ultimatesocialshare-button {
+  display: inline-flex;
+  height: 40px;
+  line-height: 40px;
+  margin: 0px 10px 10px 0px;
+  font-size: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  border: none;
+}
+body a.ultimatesocialshare-button * {
+  pointer-events: none;
+}
+.ultimatesocialshare-button-block {
+  display: inline-flex;
+  align-items: center;
+}
+.ultimatesocialshare-button-wrapper {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+.ultimatesocialshare-button:hover .ultimatesocialshare-button-wrapper>span:not(.ultimatesocialshare-inverse) {
+   box-shadow: inset 0 0 0 50px rgba(0,0,0,0.1);
+}
+.ultimatesocialshare-button:hover .ultimatesocialshare-button-wrapper>span.ultimatesocialshare-inverse {
+  filter: brightness(0.9);
+}
+
+/* button icon */
+.ultimatesocialshare-button-icon {
+  background: #333;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  box-sizing: border-box;
+}
+.ultimatesocialshare-button-icon > * {
+  height: 50%;
+  margin: 0 auto;
+}
+
+/* button share count */
+.ultimatesocialshare-button-share-count {
+  display: none;
+  font-size: 12px;
+  align-items: center;
+}
+.ultimatesocialshare-button.ultimatesocialshare-share-count:hover svg {
+  display: none;
+}
+.ultimatesocialshare-button.ultimatesocialshare-share-count:hover .ultimatesocialshare-button-share-count {
+  display: flex;
+}
+
+/* button label */
+.ultimatesocialshare-button-label {
+  background: #333;
+  color: #fff;
+  height: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding: 0px 15px 0px 0px;
+  overflow: hidden;
+}
+.ultimatesocialshare-button-label-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ultimatesocialshare-button-icon.ultimatesocialshare-inverse + .ultimatesocialshare-button-label:not(.ultimatesocialshare-inverse), .ultimatesocialshare-button-icon:not(.ultimatesocialshare-inverse) + .ultimatesocialshare-button-label.ultimatesocialshare-inverse, .ultimatesocialshare-button-icon.ultimatesocialshare-border + .ultimatesocialshare-button-label.ultimatesocialshare-inverse {
+  padding-left: 10px;
+}
+
+/* Social Network Defaults
+/************************************************************/
+.ultimatesocialshare-button.twitter .ultimatesocialshare-button-block {
+  background: #1DA1F2;
+}
+.ultimatesocialshare-button.twitter .ultimatesocialshare-border {
+  border-color: #1DA1F2;
+}
+.ultimatesocialshare-button.twitter .ultimatesocialshare-inverse {
+  color: #1DA1F2;
+}
+.ultimatesocialshare-button.facebook .ultimatesocialshare-button-block {
+  background: #3b5998;
+}
+.ultimatesocialshare-button.facebook .ultimatesocialshare-border {
+  border-color: #3b5998;
+}
+.ultimatesocialshare-button.facebook .ultimatesocialshare-inverse {
+  color: #3b5998;
+}
+.ultimatesocialshare-button.linkedin .ultimatesocialshare-button-block {
+  background: #0077B5;
+}
+.ultimatesocialshare-button.linkedin .ultimatesocialshare-border {
+  border-color: #0077B5;
+}
+.ultimatesocialshare-button.linkedin .ultimatesocialshare-inverse {
+  color: #0077B5;
+}
+.ultimatesocialshare-button.pinterest .ultimatesocialshare-button-block {
+  background: #C92228;
+}
+.ultimatesocialshare-button.pinterest .ultimatesocialshare-border {
+  border-color: #C92228;
+}
+.ultimatesocialshare-button.pinterest .ultimatesocialshare-inverse {
+  color: #C92228;
+}
+.ultimatesocialshare-button.buffer .ultimatesocialshare-button-block {
+  background: #323b43;
+}
+.ultimatesocialshare-button.buffer .ultimatesocialshare-border {
+  border-color: #323b43;
+}
+.ultimatesocialshare-button.buffer .ultimatesocialshare-inverse {
+  color: #323b43;
+}
+.ultimatesocialshare-button.reddit .ultimatesocialshare-button-block {
+  background: #ff4500;
+}
+.ultimatesocialshare-button.reddit .ultimatesocialshare-border {
+  border-color: #ff4500;
+}
+.ultimatesocialshare-button.reddit .ultimatesocialshare-inverse {
+  color: #ff4500;
+}
+.ultimatesocialshare-button.hackernews .ultimatesocialshare-button-block {
+  background: #F0652F;
+}
+.ultimatesocialshare-button.hackernews .ultimatesocialshare-border {
+  border-color: #F0652F;
+}
+.ultimatesocialshare-button.hackernews .ultimatesocialshare-inverse {
+  color: #F0652F;
+}
+.ultimatesocialshare-button.pocket .ultimatesocialshare-button-block {
+  background: #ef4056;
+}
+.ultimatesocialshare-button.pocket .ultimatesocialshare-border {
+  border-color: #ef4056;
+}
+.ultimatesocialshare-button.pocket .ultimatesocialshare-inverse {
+  color: #ef4056;
+}
+.ultimatesocialshare-button.whatsapp .ultimatesocialshare-button-block {
+  background: #25d366;
+}
+.ultimatesocialshare-button.whatsapp .ultimatesocialshare-border {
+  border-color: #25d366;
+}
+.ultimatesocialshare-button.whatsapp .ultimatesocialshare-inverse {
+  color: #25d366;
+}
+.ultimatesocialshare-button.tumblr .ultimatesocialshare-button-block {
+  background: #35465c;
+}
+.ultimatesocialshare-button.tumblr .ultimatesocialshare-border {
+  border-color: #35465c;
+}
+.ultimatesocialshare-button.tumblr .ultimatesocialshare-inverse {
+  color: #35465c;
+}
+.ultimatesocialshare-button.vkontakte .ultimatesocialshare-button-block {
+  background: #45668e;
+}
+.ultimatesocialshare-button.vkontakte .ultimatesocialshare-border {
+  border-color: #45668e;
+}
+.ultimatesocialshare-button.vkontakte .ultimatesocialshare-inverse {
+  color: #45668e;
+}
+.ultimatesocialshare-button.xing .ultimatesocialshare-button-block {
+  background: #026466;
+}
+.ultimatesocialshare-button.xing .ultimatesocialshare-border {
+  border-color: #026466;
+}
+.ultimatesocialshare-button.xing .ultimatesocialshare-inverse {
+  color: #026466;
+}
+.ultimatesocialshare-button.flipboard .ultimatesocialshare-button-block {
+  background: #e12828;
+}
+.ultimatesocialshare-button.flipboard .ultimatesocialshare-border {
+  border-color: #e12828;
+}
+.ultimatesocialshare-button.flipboard .ultimatesocialshare-inverse {
+  color: #e12828;
+}
+.ultimatesocialshare-button.telegram .ultimatesocialshare-button-block {
+  background: #0088cc;
+}
+.ultimatesocialshare-button.telegram .ultimatesocialshare-border {
+  border-color: #0088cc;
+}
+.ultimatesocialshare-button.telegram .ultimatesocialshare-inverse {
+  color: #0088cc;
+}
+.ultimatesocialshare-button.mix .ultimatesocialshare-button-block {
+  background: #fd8235;
+}
+.ultimatesocialshare-button.mix .ultimatesocialshare-border {
+  border-color: #fd8235;
+}
+.ultimatesocialshare-button.mix .ultimatesocialshare-inverse {
+  color: #fd8235;
+}
+.ultimatesocialshare-button.yummly .ultimatesocialshare-button-block {
+  background: #e16120;
+}
+.ultimatesocialshare-button.yummly .ultimatesocialshare-border {
+  border-color: #e16120;
+}
+.ultimatesocialshare-button.yummly .ultimatesocialshare-inverse {
+  color: #e16120;
+}
+.ultimatesocialshare-button.sms .ultimatesocialshare-button-block {
+  background: #218AFF;
+}
+.ultimatesocialshare-button.sms .ultimatesocialshare-border {
+  border-color: #218AFF;
+}
+.ultimatesocialshare-button.sms .ultimatesocialshare-inverse {
+  color: #218AFF;
+}
+.ultimatesocialshare-button.email .ultimatesocialshare-button-block {
+  background: #319324;
+}
+.ultimatesocialshare-button.email .ultimatesocialshare-border {
+  border-color: #319324;
+}
+.ultimatesocialshare-button.email .ultimatesocialshare-inverse {
+  color: #319324;
+}
+.ultimatesocialshare-button.print .ultimatesocialshare-button-block {
+  background: #d34836;
+}
+.ultimatesocialshare-button.print .ultimatesocialshare-border {
+  border-color: #d34836;
+}
+.ultimatesocialshare-button.print .ultimatesocialshare-inverse {
+  color: #d34836;
+}
+.ultimatesocialshare-button.\35 00px .ultimatesocialshare-button-block {
+  background: #0099E5;
+}
+.ultimatesocialshare-button.\35 00px .ultimatesocialshare-border {
+  border-color: #0099E5;
+}
+.ultimatesocialshare-button.\35 00px .ultimatesocialshare-inverse {
+  color: #0099E5;
+}
+.ultimatesocialshare-button.angellist .ultimatesocialshare-button-block {
+  background: #000000;
+}
+.ultimatesocialshare-button.angellist .ultimatesocialshare-border {
+  border-color: #000000;
+}
+.ultimatesocialshare-button.angellist .ultimatesocialshare-inverse {
+  color: #000000;
+}
+.ultimatesocialshare-button.applemusic .ultimatesocialshare-button-block {
+  background: #000000;
+}
+.ultimatesocialshare-button.applemusic .ultimatesocialshare-border {
+  border-color: #000000;
+}
+.ultimatesocialshare-button.applemusic .ultimatesocialshare-inverse {
+  color: #000000;
+}
+.ultimatesocialshare-button.bandcamp .ultimatesocialshare-button-block {
+  background: #408294;
+}
+.ultimatesocialshare-button.bandcamp .ultimatesocialshare-border {
+  border-color: #408294;
+}
+.ultimatesocialshare-button.bandcamp .ultimatesocialshare-inverse {
+  color: #408294;
+}
+.ultimatesocialshare-button.behance .ultimatesocialshare-button-block {
+  background: #1769FF;
+}
+.ultimatesocialshare-button.behance .ultimatesocialshare-border {
+  border-color: #1769FF;
+}
+.ultimatesocialshare-button.behance .ultimatesocialshare-inverse {
+  color: #1769FF;
+}
+.ultimatesocialshare-button.bitbucket .ultimatesocialshare-button-block {
+  background: #0052CC;
+}
+.ultimatesocialshare-button.bitbucket .ultimatesocialshare-border {
+  border-color: #0052CC;
+}
+.ultimatesocialshare-button.bitbucket .ultimatesocialshare-inverse {
+  color: #0052CC;
+}
+.ultimatesocialshare-button.codepen .ultimatesocialshare-button-block {
+  background: #000000;
+}
+.ultimatesocialshare-button.codepen .ultimatesocialshare-border {
+  border-color: #000000;
+}
+.ultimatesocialshare-button.codepen .ultimatesocialshare-inverse {
+  color: #000000;
+}
+.ultimatesocialshare-button.deviantart .ultimatesocialshare-button-block {
+  background: #05CC47;
+}
+.ultimatesocialshare-button.deviantart .ultimatesocialshare-border {
+  border-color: #05CC47;
+}
+.ultimatesocialshare-button.deviantart .ultimatesocialshare-inverse {
+  color: #05CC47;
+}
+.ultimatesocialshare-button.digg .ultimatesocialshare-button-block {
+  background: #000000;
+}
+.ultimatesocialshare-button.digg .ultimatesocialshare-border {
+  border-color: #000000;
+}
+.ultimatesocialshare-button.digg .ultimatesocialshare-inverse {
+  color: #000000;
+}
+.ultimatesocialshare-button.dribbble .ultimatesocialshare-button-block {
+  background: #EA4C89;
+}
+.ultimatesocialshare-button.dribbble .ultimatesocialshare-border {
+  border-color: #EA4C89;
+}
+.ultimatesocialshare-button.dribbble .ultimatesocialshare-inverse {
+  color: #EA4C89;
+}
+.ultimatesocialshare-button.dropbox .ultimatesocialshare-button-block {
+  background: #0061FF;
+}
+.ultimatesocialshare-button.dropbox .ultimatesocialshare-border {
+  border-color: #0061FF;
+}
+.ultimatesocialshare-button.dropbox .ultimatesocialshare-inverse {
+  color: #0061FF;
+}
+.ultimatesocialshare-button.flickr .ultimatesocialshare-button-block {
+  background: #0063DC;
+}
+.ultimatesocialshare-button.flickr .ultimatesocialshare-border {
+  border-color: #0063DC;
+}
+.ultimatesocialshare-button.flickr .ultimatesocialshare-inverse {
+  color: #0063DC;
+}
+.ultimatesocialshare-button.foursquare .ultimatesocialshare-button-block {
+  background: #F94877;
+}
+.ultimatesocialshare-button.foursquare .ultimatesocialshare-border {
+  border-color: #F94877;
+}
+.ultimatesocialshare-button.foursquare .ultimatesocialshare-inverse {
+  color: #F94877;
+}
+.ultimatesocialshare-button.github .ultimatesocialshare-button-block {
+  background: #181717;
+}
+.ultimatesocialshare-button.github .ultimatesocialshare-border {
+  border-color: #181717;
+}
+.ultimatesocialshare-button.github .ultimatesocialshare-inverse {
+  color: #181717;
+}
+.ultimatesocialshare-button.houzz .ultimatesocialshare-button-block {
+  background: #4DBC15;
+}
+.ultimatesocialshare-button.houzz .ultimatesocialshare-border {
+  border-color: #4DBC15;
+}
+.ultimatesocialshare-button.houzz .ultimatesocialshare-inverse {
+  color: #4DBC15;
+}
+.ultimatesocialshare-button.instagram .ultimatesocialshare-button-block {
+  background: #E4405F;
+}
+.ultimatesocialshare-button.instagram .ultimatesocialshare-border {
+  border-color: #E4405F;
+}
+.ultimatesocialshare-button.instagram .ultimatesocialshare-inverse {
+  color: #E4405F;
+}
+.ultimatesocialshare-button.jsfiddle .ultimatesocialshare-button-block {
+  background: #0084FF;
+}
+.ultimatesocialshare-button.jsfiddle .ultimatesocialshare-border {
+  border-color: #0084FF;
+}
+.ultimatesocialshare-button.jsfiddle .ultimatesocialshare-inverse {
+  color: #0084FF;
+}
+.ultimatesocialshare-button.lastfm .ultimatesocialshare-button-block {
+  background: #D51007;
+}
+.ultimatesocialshare-button.lastfm .ultimatesocialshare-border {
+  border-color: #D51007;
+}
+.ultimatesocialshare-button.lastfm .ultimatesocialshare-inverse {
+  color: #D51007;
+}
+.ultimatesocialshare-button.line .ultimatesocialshare-button-block {
+  background: #00B900;
+}
+.ultimatesocialshare-button.line .ultimatesocialshare-border {
+  border-color: #00B900;
+}
+.ultimatesocialshare-button.line .ultimatesocialshare-inverse {
+  color: #00B900;
+}
+.ultimatesocialshare-button.messenger .ultimatesocialshare-button-block {
+  background: #0078FF;
+}
+.ultimatesocialshare-button.messenger .ultimatesocialshare-border {
+  border-color: #0078FF;
+}
+.ultimatesocialshare-button.messenger .ultimatesocialshare-inverse {
+  color: #0078FF;
+}
+.ultimatesocialshare-button.mixcloud .ultimatesocialshare-button-block {
+  background: #314359;
+}
+.ultimatesocialshare-button.mixcloud .ultimatesocialshare-border {
+  border-color: #314359;
+}
+.ultimatesocialshare-button.mixcloud .ultimatesocialshare-inverse {
+  color: #314359;
+}
+.ultimatesocialshare-button.phone .ultimatesocialshare-button-block {
+  background: #512DA8;
+}
+.ultimatesocialshare-button.phone .ultimatesocialshare-border {
+  border-color: #512DA8;
+}
+.ultimatesocialshare-button.phone .ultimatesocialshare-inverse {
+  color: #512DA8;
+}
+.ultimatesocialshare-button.rss .ultimatesocialshare-button-block {
+  background: #FFA500;
+}
+.ultimatesocialshare-button.rss .ultimatesocialshare-border {
+  border-color: #FFA500;
+}
+.ultimatesocialshare-button.rss .ultimatesocialshare-inverse {
+  color: #FFA500;
+}
+.ultimatesocialshare-button.skype .ultimatesocialshare-button-block {
+  background: #00AFF0;
+}
+.ultimatesocialshare-button.skype .ultimatesocialshare-border {
+  border-color: #00AFF0;
+}
+.ultimatesocialshare-button.skype .ultimatesocialshare-inverse {
+  color: #00AFF0;
+}
+.ultimatesocialshare-button.snapchat .ultimatesocialshare-button-block {
+  background: #FFFC00;
+}
+.ultimatesocialshare-button.snapchat .ultimatesocialshare-border {
+  border-color: #FFFC00;
+}
+.ultimatesocialshare-button.snapchat .ultimatesocialshare-inverse {
+  color: #FFFC00;
+}
+.ultimatesocialshare-button.soundcloud .ultimatesocialshare-button-block {
+  background: #FF3300;
+}
+.ultimatesocialshare-button.soundcloud .ultimatesocialshare-border {
+  border-color: #FF3300;
+}
+.ultimatesocialshare-button.soundcloud .ultimatesocialshare-inverse {
+  color: #FF3300;
+}
+.ultimatesocialshare-button.spotify .ultimatesocialshare-button-block {
+  background: #1ED760;
+}
+.ultimatesocialshare-button.spotify .ultimatesocialshare-border {
+  border-color: #1ED760;
+}
+.ultimatesocialshare-button.spotify .ultimatesocialshare-inverse {
+  color: #1ED760;
+}
+.ultimatesocialshare-button.stackoverflow .ultimatesocialshare-button-block {
+  background: #FE7A16;
+}
+.ultimatesocialshare-button.stackoverflow .ultimatesocialshare-border {
+  border-color: #FE7A16;
+}
+.ultimatesocialshare-button.stackoverflow .ultimatesocialshare-inverse {
+  color: #FE7A16;
+}
+.ultimatesocialshare-button.steam .ultimatesocialshare-button-block {
+  background: #000000;
+}
+.ultimatesocialshare-button.steam .ultimatesocialshare-border {
+  border-color: #000000;
+}
+.ultimatesocialshare-button.steam .ultimatesocialshare-inverse {
+  color: #000000;
+}
+.ultimatesocialshare-button.telegram .ultimatesocialshare-button-block {
+  background: #2CA5E0;
+}
+.ultimatesocialshare-button.telegram .ultimatesocialshare-border {
+  border-color: #2CA5E0;
+}
+.ultimatesocialshare-button.telegram .ultimatesocialshare-inverse {
+  color: #2CA5E0;
+}
+.ultimatesocialshare-button.tiktok .ultimatesocialshare-button-block {
+  background: #000000;
+}
+.ultimatesocialshare-button.tiktok .ultimatesocialshare-border {
+  border-color: #000000;
+}
+.ultimatesocialshare-button.tiktok .ultimatesocialshare-inverse {
+  color: #000000;
+}
+.ultimatesocialshare-button.tripadvisor .ultimatesocialshare-button-block {
+  background: #34E0A1;
+}
+.ultimatesocialshare-button.tripadvisor .ultimatesocialshare-border {
+  border-color: #34E0A1;
+}
+.ultimatesocialshare-button.tripadvisor .ultimatesocialshare-inverse {
+  color: #34E0A1;
+}
+.ultimatesocialshare-button.vimeo .ultimatesocialshare-button-block {
+  background: #1AB7EA;
+}
+.ultimatesocialshare-button.vimeo .ultimatesocialshare-border {
+  border-color: #1AB7EA;
+}
+.ultimatesocialshare-button.vimeo .ultimatesocialshare-inverse {
+  color: #1AB7EA;
+}
+.ultimatesocialshare-button.wordpress .ultimatesocialshare-button-block {
+  background: #21759B;
+}
+.ultimatesocialshare-button.wordpress .ultimatesocialshare-border {
+  border-color: #21759B;
+}
+.ultimatesocialshare-button.wordpress .ultimatesocialshare-inverse {
+  color: #21759B;
+}
+.ultimatesocialshare-button.yelp .ultimatesocialshare-button-block {
+  background: #D32323;
+}
+.ultimatesocialshare-button.yelp .ultimatesocialshare-border {
+  border-color: #D32323;
+}
+.ultimatesocialshare-button.yelp .ultimatesocialshare-inverse {
+  color: #D32323;
+}
+.ultimatesocialshare-button.youtube .ultimatesocialshare-button-block {
+  background: #FF0000;
+}
+.ultimatesocialshare-button.youtube .ultimatesocialshare-border {
+  border-color: #FF0000;
+}
+.ultimatesocialshare-button.youtube .ultimatesocialshare-inverse {
+  color: #FF0000;
+}
+
+/* Button Styles
+/************************************************************/
+.ultimatesocialshare-border {
+  border-width: 2px;
+  border-style: solid;
+}
+body .ultimatesocialshare-button .ultimatesocialshare-button-block.ultimatesocialshare-inverse, body .ultimatesocialshare-button:hover .ultimatesocialshare-button-block.ultimatesocialshare-inverse {
+  background: transparent;
+}
+
+/* button layout */
+.ultimatesocialshare-1-col .ultimatesocialshare-buttons-wrapper > a {
+  flex-basis: 100%;
+  margin-right: 0;
+}
+.ultimatesocialshare-2-col .ultimatesocialshare-buttons-wrapper > a {
+  flex-basis: calc(50% - 5px);
+}
+.ultimatesocialshare-2-col .ultimatesocialshare-buttons-wrapper > a:nth-of-type(2n) {
+  margin-right: 0;
+}
+.ultimatesocialshare-3-col .ultimatesocialshare-buttons-wrapper > a {
+  flex-basis: calc(33.333333% - 6.666666px);
+}
+.ultimatesocialshare-3-col .ultimatesocialshare-buttons-wrapper > a:nth-of-type(3n) {
+  margin-right: 0;
+}
+.ultimatesocialshare-4-col .ultimatesocialshare-buttons-wrapper > a {
+  flex-basis: calc(25% - 7.5px);
+}
+.ultimatesocialshare-4-col .ultimatesocialshare-buttons-wrapper > a:nth-of-type(4n) {
+  margin-right: 0;
+}
+.ultimatesocialshare-5-col .ultimatesocialshare-buttons-wrapper > a {
+  flex-basis: calc(20% - 8px);
+}
+.ultimatesocialshare-5-col .ultimatesocialshare-buttons-wrapper > a:nth-of-type(5n) {
+  margin-right: 0;
+}
+.ultimatesocialshare-6-col .ultimatesocialshare-buttons-wrapper > a {
+  flex-basis: calc(16.666666% - 8.333333px);
+}
+.ultimatesocialshare-6-col .ultimatesocialshare-buttons-wrapper > a:nth-of-type(6n) {
+  margin-right: 0;
+}
+
+/* button size */
+.ultimatesocialshare-columns.small.ultimatesocialshare-has-total-share-count-before .ultimatesocialshare-buttons-wrapper {
+  margin-left: 40px;
+}
+.ultimatesocialshare-columns.small.ultimatesocialshare-has-total-share-count-after .ultimatesocialshare-buttons-wrapper {
+  margin-right: 40px;
+}
+.ultimatesocialshare-columns.large.ultimatesocialshare-has-total-share-count-before .ultimatesocialshare-buttons-wrapper {
+  margin-left: 60px;
+}
+.ultimatesocialshare-columns.large.ultimatesocialshare-has-total-share-count-after .ultimatesocialshare-buttons-wrapper {
+  margin-right: 60px;
+}
+.ultimatesocialshare-buttons.small .ultimatesocialshare-button {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.ultimatesocialshare-buttons.small .ultimatesocialshare-button-icon {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+}
+.ultimatesocialshare-buttons.small .ultimatesocialshare-button-share-count {
+  font-size: 10px;
+}
+.ultimatesocialshare-buttons.large .ultimatesocialshare-button {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+}
+.ultimatesocialshare-buttons.large .ultimatesocialshare-button-icon {
+  height: 50px;
+  width: 50px;
+  min-width: 50px;
+}
+.ultimatesocialshare-buttons.large .ultimatesocialshare-button-share-count {
+  font-size: 16px;
+}
+
+/* button shape */
+.ultimatesocialshare-rounded {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.ultimatesocialshare-rounded .ultimatesocialshare-button-label {
+  border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+}
+.ultimatesocialshare-circular {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+}
+.ultimatesocialshare-circular .ultimatesocialshare-button-label {
+  border-radius: 0px 30px 30px 0px;
+  -webkit-border-radius: 0px 30px 30px 0px;
+  -moz-border-radius: 0px 30px 30px 0px;
+}
+
+/* button alignment */
+.ultimatesocialshare-align-right {
+  justify-content: flex-end;
+}
+.ultimatesocialshare-align-right .ultimatesocialshare-button {
+  margin: 0px 0px 10px 10px;
+}
+.ultimatesocialshare-align-center {
+  justify-content: center;
+}
+.ultimatesocialshare-align-center .ultimatesocialshare-button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* Total Share Count Box
+/************************************************************/
+.ultimatesocialshare-total-share-count {
+  font-size: 15px;
+  line-height: normal;
+  text-align: center;
+  display: inline-table;
+  height: 40px;
+  width: 40px;
+  margin: 0px 0px 10px 0px;
+}
+.ultimatesocialshare-total-share-count-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.ultimatesocialshare-total-share-count-amount {
+  font-weight: bold;
+}
+.ultimatesocialshare-total-share-count-text {
+  font-size: 8px;
+  line-height: 11px;
+}
+.ultimatesocialshare-inline.ultimatesocialshare-columns .ultimatesocialshare-total-share-count {
+  position: absolute;
+  right: 0;
+  margin: 0px;
+}
+.ultimatesocialshare-inline.ultimatesocialshare-columns.ultimatesocialshare-has-total-share-count-before .ultimatesocialshare-total-share-count {
+  right: unset;
+  left: 0;
+}
+
+/* button sizes */
+.ultimatesocialshare-buttons.small .ultimatesocialshare-total-share-count {
+  height: 30px;
+  width: 30px;
+  font-size: 13px;
+}
+.ultimatesocialshare-buttons.small .ultimatesocialshare-total-share-count-text {
+  font-size: 7px;
+  line-height: 10px;
+}
+.ultimatesocialshare-buttons.large .ultimatesocialshare-total-share-count {
+  height: 50px;
+  width: 50px;
+  font-size: 19px;
+}
+.ultimatesocialshare-buttons.large .ultimatesocialshare-total-share-count-text {
+  font-size: 9px;
+  line-height: 12px;
+}
+
+/* Inline Content
+/************************************************************/
+.ultimatesocialshare-inline {
+  margin-bottom: 10px;
+  position: relative;
+}
+.ultimatesocialshare-inline-below {
+  margin-top: 20px;
+}
+
+/* Sticky Bar
+/************************************************************/
+.ultimatesocialshare-floating {
+  position: fixed;
+  top: 25%;
+  left: 5px;
+  z-index: 999;
+  height: 75%;
+}
+.ultimatesocialshare-floating .ultimatesocialshare-buttons-wrapper {
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Misc
+/************************************************************/
+.ultimatesocialshare-hide {
+  display: none;
+}
+@media print {    
+  .ultimatesocialshare-no-print, .ultimatesocialshare-no-print * {
+    display: none !important;
+  }
+}

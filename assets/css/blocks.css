@@ -1,0 +1,95 @@
+/* Click to Tweet Block
+/************************************************************/
+.wp-block-ultimatesocialshare-click-to-tweet {
+	display: block;
+	background: #00abf0;
+	margin-bottom: 3px;
+	padding: 20px 20px 20px 15px;
+	color: #ffffff;
+	text-decoration: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	border: none;
+	border-left: 5px solid #00abf0;
+}
+.wp-block-ultimatesocialshare-click-to-tweet:hover {
+	color: #ffffff;
+	border-left: 5px solid #008cc4;
+}
+.wp-block-ultimatesocialshare-click-to-tweet .ultimatesocialshare-ctt-tweet {
+	font-size: 18px;
+	line-height: 27px;
+	margin-bottom: 10px;
+}
+.wp-block-ultimatesocialshare-click-to-tweet .ultimatesocialshare-ctt-cta-container {
+	overflow: hidden;
+}
+.wp-block-ultimatesocialshare-click-to-tweet .ultimatesocialshare-ctt-cta {
+	float: right;
+}
+.wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-cta-left .ultimatesocialshare-ctt-cta {
+	float: left;
+}
+.wp-block-ultimatesocialshare-click-to-tweet .ultimatesocialshare-ctt-cta-text {
+	font-size: 16px;
+	line-height: 16px;
+	vertical-align: middle;
+}
+.wp-block-ultimatesocialshare-click-to-tweet .ultimatesocialshare-ctt-cta-icon {
+	margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.wp-block-ultimatesocialshare-click-to-tweet .ultimatesocialshare-ctt-cta-icon svg {
+	vertical-align: middle;
+	height: 18px;
+}
+
+/* Additional Themes */
+.wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple {
+	background: none;
+	padding: 10px 0px 10px 20px;
+	color: initial;
+}
+.wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple-alt {
+	background: #f9f9f9;
+	padding: 20px;
+	color: initial;
+}
+.wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-bordered {
+	background: #fff;
+	padding: 20px;
+	color: initial;
+	border: 1px solid #ccc;
+}
+.wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple:hover, .wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple-alt:hover  {
+	border-left: 5px solid #008cc4;
+}
+
+ .wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-bordered:hover {
+	border: 1px solid #008cc4;
+}
+.wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple .ultimatesocialshare-ctt-cta, .wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple-alt .ultimatesocialshare-ctt-cta ,  .wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-bordered .ultimatesocialshare-ctt-cta , .wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-bordered .ultimatesocialshare-ctt-cta {
+	color: #00abf0;
+}
+.wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple:hover .ultimatesocialshare-ctt-cta, .wp-block-ultimatesocialshare-click-to-tweet.ultimatesocialshare-ctt-simple-alt:hover .ultimatesocialshare-ctt-cta {
+	color: #008cc4;
+}
+
+/* Character Count */
+.ultimatesocialshare-ctt-char-count {
+	font-size: 14px;
+	font-style: italic;
+}
+.ultimatesocialshare-ctt-positive {
+	color: #aaaaaa;
+}
+.ultimatesocialshare-ctt-negative {
+	color: #ff3838;
+}
+
+/* Block Settings Sidebar Panel */
+.ultimatesocialshare-block-settings select {
+	max-width: none;
+}
